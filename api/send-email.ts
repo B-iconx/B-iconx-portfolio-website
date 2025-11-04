@@ -41,10 +41,10 @@ export default async function handler(
                   <td style="padding: 0;">
                     <div style="background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%); padding: 40px 30px; text-align: center;">
                       <h1 style="margin: 0; color: #ffffff; font-size: 28px; font-weight: bold;">
-                        📬 New Contact Form Submission
+                        📬 New Contact Form 
                       </h1>
                       <p style="margin: 10px 0 0 0; color: #e0e7ff; font-size: 14px;">
-                        From Dawncrown Website
+                        From B-iconx Portfolio Website
                       </p>
                     </div>
                   </td>
@@ -171,10 +171,10 @@ export default async function handler(
                 <tr>
                   <td style="padding: 30px; background-color: #f9fafb; border-top: 1px solid #e5e7eb;">
                     <p style="margin: 0 0 10px 0; color: #6b7280; font-size: 12px; text-align: center;">
-                      This email was sent from your Dawncrown website contact form
+                      This email was sent from your B-iconx Portfolio website contact form
                     </p>
                     <p style="margin: 0; color: #9ca3af; font-size: 11px; text-align: center;">
-                      © ${new Date().getFullYear()} Dawncrown Decoration Enterprises. All rights reserved.
+                      © ${new Date().getFullYear()} B-iconx Portfolio. All rights reserved.
                     </p>
                   </td>
                 </tr>
@@ -189,7 +189,7 @@ export default async function handler(
 
     // Plain text version (fallback)
     const textContent = `
-New Contact Form Submission from Dawncrown Website
+New Contact Form Submission from B-iconx Portfolio Website
 
 Name: ${name} 
 Email: ${email}
