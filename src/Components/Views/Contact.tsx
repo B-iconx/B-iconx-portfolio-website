@@ -8,7 +8,6 @@ const ContactSection: React.FC = () => {
     subject: '',
     phone: '',
     message: ''
-
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'success' | 'error' | null>(null);
@@ -37,57 +36,61 @@ const ContactSection: React.FC = () => {
       newErrors.message = 'Message must be at least 10 characters';
     }
 
+    setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
-    if (validateForm()) {
-      setIsSubmitting(true);
+    if (!validateForm()) {
+      setSubmitStatus('error');
+      return;
+    }
+    
+    setIsSubmitting(true);
       
-      try {
-        // Send email via Resend API
-        const response = await fetch('/api/send-email', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-            name: formData.name,
-            email: formData.email,
-            subject: formData.subject,
-            message: formData.message,
-          })
+    try {
+      // Send email via Resend API
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        })
+      });
+
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        setSubmitStatus('success');
+        setFormData({
+          name: '',
+          email: '', 
+          subject: '',
+          phone: '',
+          message: ''
         });
-
-        const result = await response.json();
-
-        if (response.ok && result.success) {
-          setSubmitStatus('success');
-          setFormData({
-            name: '',
-            email: '', 
-            subject: '',
-            phone: '',
-            message: ''
-          });
-          
-          // Auto-hide success message after 5 seconds
-          setTimeout(() => setSubmitStatus(null), 5000);
-        } else {
-          setSubmitStatus('error');
-        }
-      } catch (error) {
-        console.error('Error submitting form:', error);
+        
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => setSubmitStatus(null), 5000);
+      } else {
         setSubmitStatus('error');
-      } finally {
-        setIsSubmitting(false);
       }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
     }
   };
   
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
@@ -121,12 +124,11 @@ const ContactSection: React.FC = () => {
   const socialLinks = [
     { icon: Github, label: 'GitHub', link: 'https://github.com/B-iconx' },
     { icon: Linkedin, label: 'LinkedIn', link: 'https://www.linkedin.com/in/ifeanyi-o-52407037a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
-    { icon: ExternalLink, text: 'Hire on Upwork', href: 'https://www.upwork.com/freelancers/~01a705b6a1bd8a779d' },
+    { icon: ExternalLink, label: 'Upwork', text: 'Hire on Upwork', link: 'https://www.upwork.com/freelancers/~01a705b6a1bd8a779d' },
   ];
 
-
   return (
-    <section id="contact" className="relative py-20 px-4 md:px-10  overflow-hidden">
+    <section id="contact" className="relative py-20 px-4 md:px-10 overflow-hidden">
       {/* Animated background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-20 right-10 w-96 h-96 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-blob"></div>
@@ -141,14 +143,14 @@ const ContactSection: React.FC = () => {
               <span className="text-white text-xl">📧</span>
             </div>
           </div>
-          <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-2">
+          <p className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">
             Get In Touch
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-800 via-gray-300 to-slate-700">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-800 via-gray-600 to-slate-700">
             Let's Work Together
           </h2>
-           <div className="w-24 h-0.5 bg-gradient-to-r from-gray-900 via-gray-400 to-transparent mx-auto mt-3"></div>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mt-2 leading-relaxed">
+          <div className="w-24 h-0.5 bg-gradient-to-r from-gray-900 via-gray-400 to-transparent mx-auto mt-3"></div>
+          <p className="text-gray-600 text-lg max-w-2xl mx-auto mt-2 leading-relaxed">
             Have a project in mind? Let's discuss how I can help bring your ideas to life.
           </p>
         </div>
@@ -271,7 +273,6 @@ const ContactSection: React.FC = () => {
                   </div>
                 </div>
 
-                
                 <div className="grid md:grid-cols-2 gap-6">
                   {/* Subject Field */}
                   <div>
@@ -291,22 +292,24 @@ const ContactSection: React.FC = () => {
                     />
                     {errors.subject && <p className="text-red-600 text-sm mt-1">{errors.subject}</p>}
                   </div>
-                      {/* phone Field */}
+                  
+                  {/* Phone Field */}
                   <div className="min-w-0">
-                    <label htmlFor="tel" className="block text-sm font-semibold text-gray-700 mb-2">
-                      phone *
+                    <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                      Phone
                     </label>
                     <input
                       type="tel"
+                      id="phone"
                       name="phone"
-                      placeholder="enter phone number"
+                      placeholder="Enter phone number"
                       value={formData.phone}
                       onChange={handleChange}
                       className={`w-full px-4 py-3 rounded-xl border ${
-                        errors.subject ? 'border-red-300 bg-red-50' : 'border-gray-200 bg-gray-50'
+                        errors.phone ? 'border-red-300 bg-red-50' : 'border-gray-200 bg-gray-50'
                       } focus:outline-none focus:ring-2 focus:ring-slate-500 focus:border-transparent transition-all`}
                     />
-                    {errors.subject && <p className="text-red-600 text-sm mt-1">{errors.subject}</p>}
+                    {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
                   </div>
                 </div>
 
@@ -334,7 +337,7 @@ const ContactSection: React.FC = () => {
                   type="button"
                   onClick={handleSubmit}
                   disabled={isSubmitting}
-                  className="w-full px-8 py-4 bg-gradient-to-r from-slate-700 to-gray-800 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 transform flex items-center justify-center gap-2 group disabled:opacity-50"
+                  className="w-full px-8 py-4 bg-gradient-to-r from-slate-700 to-gray-800 text-white rounded-xl font-semibold transition-all duration-300 hover:shadow-xl hover:scale-105 transform flex items-center justify-center gap-2 group disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
                   <Send size={20} className="group-hover:translate-x-1 transition-transform" />
@@ -369,6 +372,5 @@ const ContactSection: React.FC = () => {
     </section>
   );
 };
-
 
 export default ContactSection;
