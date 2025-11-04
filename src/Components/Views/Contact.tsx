@@ -213,6 +213,17 @@ const ContactSection: React.FC = () => {
           <div className="lg:col-span-3">
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
               <div className="space-y-6">
+                {/* Loading Toast */}
+                {isSubmitting && (
+                  <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 flex items-center gap-3">
+                    <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-blue-600"></div>
+                    <div>
+                      <p className="font-semibold text-blue-900">Sending your message...</p>
+                      <p className="text-sm text-blue-700">Please wait while we process your request.</p>
+                    </div>
+                  </div>
+                )}
+
                 {/* Success Message */}
                 {submitStatus === 'success' && (
                   <div className="bg-green-50 border border-green-200 rounded-xl p-4 flex items-center gap-3">
