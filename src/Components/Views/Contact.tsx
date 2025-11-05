@@ -144,14 +144,14 @@ const ContactSection: React.FC = () => {
               <span className="text-white text-xl">📧</span>
             </div>
           </div>
-          <p className="text-sm font-semibold text-gray-600 uppercase tracking-wider mb-2">
+          <p className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-2">
             Get In Touch
           </p>
-          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-800 via-gray-600 to-slate-700">
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-slate-700 via-gray-200 to-slate-600">
             Let's Work Together
           </h2>
           <div className="w-24 h-0.5 bg-gradient-to-r from-gray-900 via-gray-400 to-transparent mx-auto mt-3"></div>
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto mt-2 leading-relaxed">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto mt-2 leading-relaxed">
             Have a project in mind? Let's discuss how I can help bring your ideas to life.
           </p>
         </div>
