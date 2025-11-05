@@ -30,12 +30,12 @@ const Footer: React.FC = () => {
   const socialLinks = [
     { icon: Github, label: 'GitHub', href: 'https://github.com/B-iconx' },
     { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/ifeanyi-o-52407037a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
-     { icon: ExternalLink, label: 'Upwork', href: 'https://www.upwork.com/freelancers/~01a705b6a1bd8a779d' },
+     { icon: ExternalLink, label: 'Upwork', href: 'https://www.upwork.com/freelancers/~010f010fe2080bb585?mp_source=share' },
   ];
 
   const contactInfo = [
     { icon: Linkedin, text: 'Connect on LinkedIn', href:'https://www.linkedin.com/in/ifeanyi-o-52407037a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'  },
-    { icon: ExternalLink, text: 'Hire on Upwork', href: 'https://www.upwork.com/freelancers/~01a705b6a1bd8a779d' },
+    { icon: ExternalLink, text: 'Hire on Upwork', href: 'https://www.upwork.com/freelancers/~010f010fe2080bb585?mp_source=share' },
     { icon: MapPin, text: 'Lagos, Nigeria', href: '#' }
   ];
 
@@ -154,7 +154,7 @@ const Footer: React.FC = () => {
           <div className="container mx-auto px-4 md:px-10 py-6">
             <div className="flex flex-col md:flex-row justify-center items-center gap-4">
               <div className="flex items-center gap-2 text-gray-400 text-sm">
-                <span>© 2025 Portfolio. Made with</span>
+                <span>© 2025 B-iconx Portfolio. Made with</span>
                 <Heart className="text-red-500 fill-red-500" size={16} />
                 <span>All rights reserved.</span>
               </div>

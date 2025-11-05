@@ -125,7 +125,7 @@ const ContactSection: React.FC = () => {
   const socialLinks = [
     { icon: Github, label: 'GitHub', link: 'https://github.com/B-iconx' },
     { icon: Linkedin, label: 'LinkedIn', link: 'https://www.linkedin.com/in/ifeanyi-o-52407037a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
-    { icon: ExternalLink, label: 'Upwork', text: 'Hire on Upwork', link: 'https://www.upwork.com/freelancers/~01a705b6a1bd8a779d' },
+    { icon: ExternalLink, label: 'Upwork', text: 'Hire on Upwork', link: 'https://www.upwork.com/freelancers/~010f010fe2080bb585?mp_source=share' },
   ];
 
   return (
