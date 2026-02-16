@@ -103,7 +103,7 @@ const ContactSection: React.FC = () => {
       icon: Mail,
       label: 'Email',
       value: 'Reach me via LinkedIn',
-      link: 'https://www.linkedin.com/in/ifeanyi-o-52407037a',
+      link: 'https://www.linkedin.com/in/b-iconx-i-52407037a',
       ariaLabel: 'Contact via LinkedIn'
     },
     {
@@ -132,7 +132,7 @@ const ContactSection: React.FC = () => {
     { 
       icon: Linkedin, 
       label: 'LinkedIn', 
-      link: 'https://www.linkedin.com/in/ifeanyi-o-52407037a',
+      link: 'https://www.linkedin.com/in/b-iconx-i-52407037a',
       ariaLabel: 'Visit LinkedIn profile'
     },
     { 

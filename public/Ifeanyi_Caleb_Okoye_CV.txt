@@ -1,0 +1,99 @@
+IFEANYI CALEB OKOYE
+Frontend Developer | UI/UX Specialist
+Lagos, Nigeria
+Phone: +234 (Your Phone)
+Email: (Your Email)
+Upwork: https://www.upwork.com/freelancers/~01a705b6a1bd8a779d
+
+═══════════════════════════════════════════════════════════════
+
+PROFESSIONAL SUMMARY
+
+Design-driven Frontend Developer with 1+ years of experience crafting responsive, user-friendly, and visually engaging web applications. Specialized in modern frontend technologies with hands-on Django backend experience, enabling complete full-stack solutions. Passionate about creating web experiences that don't just look good—they feel good.
+
+═══════════════════════════════════════════════════════════════
+
+CORE COMPETENCIES
+
+• Frontend Frameworks: React, TypeScript, Vue.js
+• Styling & UI: Tailwind CSS, CSS3, Responsive Design
+• Development Tools: Vite, Webpack, NPM, Git
+• Backend: Django, Python
+• Other Tools: HTML5, JavaScript ES6+, Rest APIs
+• Design: UI/UX Design, Figma
+• Best Practices: SEO, Performance Optimization, Accessibility
+
+═══════════════════════════════════════════════════════════════
+
+PROFESSIONAL EXPERIENCE
+
+FRONTEND DEVELOPER
+Self-Employed | 2023 - Present
+
+• Developed 10+ responsive web applications using React and TypeScript
+• Optimized application performance, achieving 98% user satisfaction rate
+• Implemented modern UI designs with Tailwind CSS and custom CSS
+• Integrated RESTful APIs and managed state effectively
+• Collaborated with clients on 24/7 support basis
+• Deployed applications on various hosting platforms
+
+JUNIOR DEVELOPER
+(Previous Experience - Customize as needed)
+
+• Worked on frontend feature development and bug fixes
+• Participated in code reviews and team collaboration
+• Contributed to cross-functional projects
+
+═══════════════════════════════════════════════════════════════
+
+EDUCATION
+
+DIPLOMA/CERTIFICATION (Customize)
+Institution Name | Year
+• Relevant coursework or certifications
+
+ADDITIONAL TRAINING
+• Advanced React & TypeScript
+• Responsive Web Design
+• UI/UX Fundamentals
+
+═══════════════════════════════════════════════════════════════
+
+NOTABLE PROJECTS
+
+BICONX PORTFOLIO
+Technologies: React, TypeScript, Tailwind CSS, Vite
+• Personal portfolio showcasing expertise in modern web development
+• Implemented interactive carousel and smooth navigation
+• Responsive design optimized for all devices
+
+PROJECT NAME 2
+Technologies: (List technologies used)
+• Project description and key achievements
+• Impact or results achieved
+
+PROJECT NAME 3
+Technologies: (List technologies used)
+• Project description and key achievements
+• Impact or results achieved
+
+═══════════════════════════════════════════════════════════════
+
+CERTIFICATIONS & RECOGNITIONS
+
+• 98% Client Satisfaction Rate
+• 24/7 Professional Support
+• 10+ Projects Successfully Completed
+• Upwork Top-Rated Freelancer (if applicable)
+
+═══════════════════════════════════════════════════════════════
+
+ADDITIONAL INFORMATION
+
+Languages: English (Fluent)
+Availability: Open to Remote Projects
+Work Style: Design-driven, innovative, and collaborative
+
+═══════════════════════════════════════════════════════════════
+
+References and detailed project portfolio available upon request.

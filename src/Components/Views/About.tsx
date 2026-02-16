@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight,  MapPin, Briefcase, User, Download, External
 import dp1 from '../../assets/dp1.jpeg';
 import dp2 from '../../assets/dp2.png';
 import dp3 from '../../assets/dp3.png';
+import { generateCVPDF } from '../../utils/generateCVPDF';
 
 interface CarouselSlide {
   image: string;
@@ -37,6 +38,10 @@ const AboutSection: React.FC = () => {
 
   const goToSlide = (index: number) => {
     setCurrentSlide(index);
+  };
+
+  const downloadCV = () => {
+    generateCVPDF();
   };
 
   useEffect(() => {
@@ -185,13 +190,16 @@ const AboutSection: React.FC = () => {
                   </div>
                   <span className="text-sm font-semibold text-gray-500 uppercase tracking-wide">Experience</span>
                 </div>
-                <p className="text-gray-900 font-semibold ml-11">1+ Years</p>
+                <p className="text-gray-900 font-semibold ml-11">2+ Years</p>
               </div>
             </div>
 
             {/* Action Buttons */}
             <div className="flex flex-wrap gap-4 pt-4">
-              <button className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg">
+              <button 
+                onClick={downloadCV}
+                className="flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:shadow-lg"
+              >
                 <Download size={18} />
                 Download CV
               </button>
