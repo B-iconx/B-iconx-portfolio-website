@@ -29,12 +29,12 @@ const Footer: React.FC = () => {
 
   const socialLinks = [
     { icon: Github, label: 'GitHub', href: 'https://github.com/B-iconx' },
-    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/ifeanyi-o-52407037a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/b-iconx-i-52407037a' },
      { icon: ExternalLink, label: 'Upwork', href: 'https://www.upwork.com/freelancers/~010f010fe2080bb585?mp_source=share' },
   ];
 
   const contactInfo = [
-    { icon: Linkedin, text: 'Connect on LinkedIn', href:'https://www.linkedin.com/in/ifeanyi-o-52407037a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app'  },
+    { icon: Linkedin, text: 'Connect on LinkedIn', href:'https://www.linkedin.com/in/b-iconx-i-52407037a'  },
     { icon: ExternalLink, text: 'Hire on Upwork', href: 'https://www.upwork.com/freelancers/~010f010fe2080bb585?mp_source=share' },
     { icon: MapPin, text: 'Lagos, Nigeria', href: '#' }
   ];
