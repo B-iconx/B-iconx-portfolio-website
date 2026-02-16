@@ -30,6 +30,7 @@ const SkillsSection: React.FC = () => {
         { name: "JavaScript", percentage: 75, icon: "JS", color: "#1e293b", category: "Frontend" },
         { name: "TypeScript", percentage: 70, icon: "TS", color: "#334155", category: "Frontend" },
         { name: "React.js", percentage: 82, icon: "⚛️", color: "#475569", category: "Frontend" },
+        { name: "Next.js", percentage: 70, icon: "🧿", color: "#475569", category: "Frontend" },
         { name: "Jquery", percentage: 76, icon: "🔰", color: "#64748b", category: "Frontend" },
         { name: "TailwindCss", percentage: 73, icon: "▲", color: "#64748b", category: "Frontend" },
         { name: "Bootstrap", percentage: 75, icon: "🔅", color: "#64748b", category: "Frontend" },

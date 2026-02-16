@@ -86,7 +86,7 @@ const HeroSection = () => {
                     Hello, I'm
                   </span>
                   <span className="block text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
-                    B-icox
+                    B-iconx
                   </span>
                   <span className="block text-2xl md:text-3xl font-semibold text-gray-300 leading-tight">Ifeanyi Caleb Okoye</span>
                 </h1>
