@@ -21,7 +21,7 @@ export const generateCVPDF = () => {
   const addSectionTitle = (title: string) => {
     checkNewPage(15);
     doc.setFontSize(12);
-    doc.setFont(undefined, 'bold');
+    doc.setFont('', 'bold');
     doc.text(title, margin, yPosition);
     yPosition += 7;
     doc.setDrawColor(100);
@@ -32,9 +32,9 @@ export const generateCVPDF = () => {
   // Helper function for text wrapping
   const addWrappedText = (text: string, fontSize: number = 10, bold: boolean = false, indent: number = 0) => {
     doc.setFontSize(fontSize);
-    doc.setFont(undefined, bold ? 'bold' : 'normal');
+    doc.setFont('', bold ? 'bold' : 'normal');
     const lines = doc.splitTextToSize(text, maxWidth - indent);
-    lines.forEach((line: string, index: number) => {
+    lines.forEach((line: string) => {
       checkNewPage(8);
       doc.text(line, margin + indent, yPosition);
       yPosition += lineHeight;
@@ -43,16 +43,16 @@ export const generateCVPDF = () => {
 
   // Header
   doc.setFontSize(16);
-  doc.setFont(undefined, 'bold');
+  doc.setFont('', 'bold');
   doc.text('OKOYE IFEANYI CALEB', margin, yPosition);
   yPosition += 8;
 
   doc.setFontSize(11);
-  doc.setFont(undefined, 'normal');
+  doc.setFont('', 'normal');
   addWrappedText('Front-End Developer | Backend (Django)', 11);
 
   doc.setFontSize(9);
-  doc.setFont(undefined, 'normal');
+  doc.setFont('', 'normal');
   addWrappedText('Hawalli, Kuwait | Phone: +2348083808146', 9);
   addWrappedText('Email: biconx28@gmail.com', 9);
   addWrappedText('GitHub: https://github.com/B-iconx | LinkedIn: http://linkedin.com/in/b-iconx-i-52407037a', 9);
@@ -192,7 +192,7 @@ export const generateCVPDF = () => {
   // Footer
   checkNewPage(10);
   doc.setFontSize(9);
-  doc.setFont(undefined, 'normal');
+  doc.setFont('', 'normal');
   addWrappedText('Additional Information:', 10, true);
   addWrappedText('Languages: Fluent in English and Igbo', 9);
   addWrappedText('Interests: Passionate about web development, open-source contributions, Music, and continuous learning in the tech field', 9);
@@ -201,7 +201,7 @@ export const generateCVPDF = () => {
   // Final footer
   checkNewPage(10);
   doc.setFontSize(8);
-  doc.setFont(undefined, 'italic');
+  doc.setFont('', 'italic');
   doc.text('References and detailed project portfolio available upon request.', margin, pageHeight - 10);
 
   // Save the PDF
