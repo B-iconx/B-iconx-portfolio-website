@@ -16,14 +16,32 @@ const Header: React.FC<{ isNavVisible?: boolean }> = ({ isNavVisible = true }) =
   ];
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 20);
+    const sectionIds = ['home', 'about', 'skills', 'experience', 'projects', 'contact'];
+  
+    const observers = sectionIds.map((id) => {
+      const el = document.getElementById(id);
+      if (!el) return null;
+  
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setActiveSection(id.charAt(0).toUpperCase() + id.slice(1));
+          }
+        },
+        { threshold: 0.3 } // section must be 30% visible to trigger
+      );
+  
+      observer.observe(el);
+      return observer;
+    });
+  
+    return () => {
+      observers.forEach((obs, i) => {
+        const el = document.getElementById(sectionIds[i]);
+        if (obs && el) obs.unobserve(el);
+      });
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   const handleNavClick = (name: string) => {
     setActiveSection(name);
     setIsNavOpen(false);

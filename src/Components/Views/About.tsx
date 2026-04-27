@@ -217,9 +217,9 @@ const AboutSection: React.FC = () => {
 
          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16">
           {[
-            { number: '10+', label: 'Projects Done' },
-            { number: '10+', label: 'Technologies' },
-            { number: '98%', label: 'Satisfaction' },
+            { number: '30+', label: 'Projects Done' },
+            { number: '2+', label: 'Years of Experience' },
+            { number: '100%', label: 'Satisfaction' },
             { number: '24/7', label: 'Support' }
           ].map((stat, index) => (
             <div

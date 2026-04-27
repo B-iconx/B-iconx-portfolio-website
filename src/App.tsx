@@ -8,6 +8,7 @@ import Testimonials from './Components/Views/Testimonials'
 import Contact from './Components/Views/Contact'
 import Footer from './Components/Layouts/Footer'
 import React, { useState, useEffect } from 'react';
+import WhatsAppFloat from './Components/WhatsAppFloat';
 
 
 // Main Portfolio Component
@@ -45,11 +46,15 @@ import React, { useState, useEffect } from 'react';
       <Hero />
       <About />
       <Skills />
+      {/* <MainProject /> */}
       <Experience />
       <Projects />
       <Testimonials />
       <Contact />
+      <WhatsAppFloat />
       <Footer />
+      
+      
       
       <style>{`
         @keyframes gradient {

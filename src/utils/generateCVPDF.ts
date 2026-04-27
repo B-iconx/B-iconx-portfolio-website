@@ -44,19 +44,20 @@ export const generateCVPDF = () => {
   // Header
   doc.setFontSize(16);
   doc.setFont('', 'bold');
-  doc.text('OKOYE IFEANYI CALEB', margin, yPosition);
+  doc.text('OKOYE IFEANYI CALEB', pageWidth / 2, yPosition, { align: 'center' });
   yPosition += 8;
 
   doc.setFontSize(11);
   doc.setFont('', 'normal');
-  addWrappedText('Front-End Developer | Backend (Django)', 11);
+  doc.text('Front-End Developer | Backend (Django)', pageWidth / 2, yPosition, { align: 'center' });
+  yPosition += lineHeight + 1;
 
   doc.setFontSize(9);
-  doc.setFont('', 'normal');
-  addWrappedText('Hawalli, Kuwait | Phone: +2348083808146', 9);
-  addWrappedText('Email: biconx28@gmail.com', 9);
-  addWrappedText('GitHub: https://github.com/B-iconx | LinkedIn: http://linkedin.com/in/b-iconx-i-52407037a', 9);
-  yPosition += 3;
+  doc.text('Hawalli, Kuwait | Phone: +2348083808146 | Email: biconx28@gmail.com', pageWidth / 2, yPosition, { align: 'center' });
+  yPosition += lineHeight;
+  
+  doc.text('GitHub: https://github.com/B-iconx | LinkedIn: http://linkedin.com/in/b-iconx-i-52407037a', pageWidth / 2, yPosition, { align: 'center' });
+  yPosition += lineHeight + 3;
 
   // Professional Summary
   addSectionTitle('PROFESSIONAL SUMMARY');
@@ -79,6 +80,7 @@ export const generateCVPDF = () => {
   addWrappedText('Frameworks and Libraries:', 10, true);
   const frameworks = [
     'React.js',
+    'Next.js',
     'jQuery',
     'Django (Basic)',
     'Bootstrap',
@@ -90,8 +92,9 @@ export const generateCVPDF = () => {
 
   addWrappedText('Tools and Technologies:', 10, true);
   const tools = [
-    'SQLite (Database)',
-    'Git and GitHub (Version Control)'
+    'MySQL, PostgresSQL,SQLite (Database)',
+    'Git and GitHub (Version Control)',
+    'API Integration'
   ];
   tools.forEach(tool => {
     addWrappedText(`• ${tool}`, 9, false, 2);
@@ -119,14 +122,15 @@ export const generateCVPDF = () => {
   yPosition += 2;
 
   addWrappedText('Web Developer', 10, true);
-  addWrappedText('R-Tech Global Enterprise, Lagos, Nigeria | March 2025 – Present', 9);
+  addWrappedText('R-Tech Global Enterprise, Lagos, Nigeria | March 2021 – 2025', 9);
   const exp2 = [
     'Developed a responsive e-commerce website, focusing on user-friendly interfaces and cross-browser compatibility using HTML, CSS, Bootstrap, jQuery, and AJAX',
     'Implemented modern UI/UX principles to enhance user experience and engagement',
     'Integrated front-end components with Django back-end services',
     'Implemented and optimised database structures using SQLite',
     'Deployed website and application to production environment',
-    'Maintained and updated existing web applications to improve performance and user experience'
+    'Maintained and updated existing web applications to improve performance and user experience',
+    'Graphic designer'
   ];
   exp2.forEach(item => {
     addWrappedText(`• ${item}`, 9, false, 2);
@@ -166,8 +170,8 @@ export const generateCVPDF = () => {
     'Higher National Diploma (HND) in Computer Engineering',
     'National Diploma (ND) in Computer Engineering',
     'Certificate in Programming and Web Design',
-    'Cisco Certification (2021)',
-    'Cisco Certification (2023)'
+    'Cisco Certification (2023)',
+    'Cisco Certification (2021)'
   ];
   certs.forEach(cert => {
     addWrappedText(`• ${cert}`, 9);
