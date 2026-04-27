@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Eye, Sparkles, Code2, Rocket } from 'lucide-react';
+import {  Github, Eye,  Code2, Rocket } from 'lucide-react';
 import naijalance from '../../assets/naijalance.png';
 import construction from '../../assets/port.png';
 import ecommerce from '../../assets/project3.png';
@@ -92,7 +92,7 @@ const cards: Card[] = [
 ];
 
 // Individual card component so useState hook works per card
-const StickyCard: React.FC<{ c: Card; i: number }> = ({ c, i }) => {
+const StickyCard: React.FC<{ c: Card; i: number }> = ({ c,  }) => {
   const [touched, setTouched] = useState(false);
 
   return (

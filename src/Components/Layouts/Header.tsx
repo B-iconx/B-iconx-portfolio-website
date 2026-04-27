@@ -4,7 +4,7 @@ import { Menu, X } from 'lucide-react';
 const Header: React.FC<{ isNavVisible?: boolean }> = ({ isNavVisible = true }) => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('Home');
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, ] = useState(false);
 
   const navItems = [
     { name: 'Home', href: '#home' },
